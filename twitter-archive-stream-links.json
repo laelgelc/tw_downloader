@@ -4864,5 +4864,23 @@
         "month": "06",
         "year": "2020",
         "link": "https://archive.org/download/archiveteam-twitter-stream-2020-06/twitter_stream_2020_06_30.tar"
+    },
+    {
+        "day": "dd",
+        "month": "mm",
+        "year": "202y",
+        "link": "https://archive.org/download/archiveteam-twitter-stream-2020-06/twitter_stream_202y_mm_dd.tar"
+    },
+    {
+        "day": "dd",
+        "month": "mm",
+        "year": "202y",
+        "link": "https://archive.org/download/archiveteam-twitter-stream-2020-06/twitter_stream_202y_mm_dd.tar"
+    },
+    {
+        "day": "30",
+        "month": "01",
+        "year": "2023",
+        "link": "https://archive.org/download/archiveteam-twitter-stream-2023-01/twitter-stream-20230130.tar"
     }
 ]
