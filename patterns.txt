@@ -15,6 +15,8 @@ https://archive.org/download/archiveteam-twitter-json-2011/twitter-json-scrape-2
 
 twitter-stream-2011-09-27.zip
 https://archive.org/download/archiveteam-json-twitterstream/twitter-stream-2011-09-27.zip
+https://archive.org/download/archiveteam-twitter-stream-2017-09/twitter-stream-2017-09-01.tar
+https://archive.org/download/archiveteam-twitter-stream-2017-09/twitter-stream-2017-09-16.tar
 
 twitter_stream_2018_11_01.tar
 https://archive.org/download/archiveteam-twitter-stream-2018-11/twitter_stream_2018_11_01.tar
