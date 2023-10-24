@@ -17,9 +17,9 @@ TWITTER_ARCHIVE_STREAM_LINKS_PATH = (
     CURRENT_FILE_PATH.parent / "twitter-archive-stream-links.json"
 )
 
-FIRST_DAY_OF_SUPPORT = datetime.date(2017, 6, 1)
-LAST_DAY_OF_SUPPORT = datetime.date(2020, 6, 30)
-LAST_DAY_OF_UPDATE = datetime.date(2023, 1, 31)
+FIRST_DAY_OF_SUPPORT = datetime.date(2011, 9, 27)
+LAST_DAY_OF_SUPPORT = datetime.date(2023, 1, 31)
+
 
 class _DownloadWorker(Thread):  # skip_tests
     def __init__(
