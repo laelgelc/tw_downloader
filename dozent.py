@@ -19,7 +19,7 @@ TWITTER_ARCHIVE_STREAM_LINKS_PATH = (
 
 FIRST_DAY_OF_SUPPORT = datetime.date(2017, 6, 1)
 LAST_DAY_OF_SUPPORT = datetime.date(2020, 6, 30)
-
+LAST_DAY_OF_UPDATE = datetime.date(2023, 1, 31)
 
 class _DownloadWorker(Thread):  # skip_tests
     def __init__(
