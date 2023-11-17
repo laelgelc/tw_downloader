@@ -22,7 +22,7 @@ links_list = 'tw_aws_pysmartdl_links_list_test.csv'
 #links_list = 'tw_aws_pysmartdl_links_list_2023.csv'
 #links_list = 'tw_aws_pysmartdl_links_list_test.csv'
 
-output_directory = '/home/ubuntu/tw_aws_pysmartdl_data'
+output_directory = 'tw_aws_pysmartdl_data'
 
 if os.path.exists(output_directory):
     shutil.rmtree(output_directory)
