@@ -22,7 +22,7 @@ links_list = 'tw_aws_pysmartdl_links_list_test.csv'
 #links_list = 'tw_aws_pysmartdl_links_list_2023.csv'
 #links_list = 'tw_aws_pysmartdl_links_list_test.csv'
 
-output_directory = 'tw_aws_pysmartdl_data'
+output_directory = '/home/ubuntu/tw_aws_pysmartdl_data'
 
 if os.path.exists(output_directory):
     shutil.rmtree(output_directory)
@@ -51,7 +51,7 @@ for index, row in df.iterrows():
     print('Processing ' + link)
     obj = SmartDL(link, output_directory, threads=threads)
     obj.start()
-    files_to_copy = glob.glob(output_directory + '/*')
+    files_to_copy = glob.glob(output_directory)
     for file in files_to_copy:
         subprocess.run(['aws', 's3', 'cp', file, destination], bufsize=0)
         subprocess.run(['rm', '-f', file], bufsize=0)
