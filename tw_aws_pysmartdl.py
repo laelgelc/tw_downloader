@@ -44,11 +44,12 @@ else:
 bucket = 'laelgelctweets'
 destination = 's3://{}/'.format(bucket)
 df = pd.read_csv(links_list, header = 0)
+threads = 20
 
 for index, row in df.iterrows():
     link = row['Links']
     print('Processing ' + link)
-    obj = SmartDL(link, output_directory)
+    obj = SmartDL(link, output_directory, threads=threads)
     obj.start()
     files_to_copy = glob.glob(output_directory + '/*')
     for file in files_to_copy:
