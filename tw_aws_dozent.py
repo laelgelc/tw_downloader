@@ -32,7 +32,7 @@ with open(logfile, 'a', encoding='utf8') as log:
         print('Processing ' + date)
         log.write('Processing ' + date + '\n')
         subprocess.run(['python', '-m', 'dozent', '-s', date, '-e', date], bufsize=0)
-        files_to_copy = glob.glob(origin)
+        files_to_copy = sorted(glob.glob(origin))
         for file in files_to_copy:
             subprocess.run(['aws', 's3', 'cp', file, destination], bufsize=0)
             subprocess.run(['rm', '-f', file], bufsize=0)
