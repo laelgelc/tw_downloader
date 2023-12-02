@@ -22,7 +22,7 @@ links_list = 'tw_aws_pysmartdl_links_list_test.csv'
 #links_list = 'tw_aws_pysmartdl_links_list_2023.csv'
 #links_list = 'tw_aws_pysmartdl_links_list_test.csv'
 
-output_directory = 'tw_aws_pysmartdl_data'
+output_directory = 'tw_aws_data'
 
 if os.path.exists(output_directory):
     shutil.rmtree(output_directory)
@@ -49,7 +49,7 @@ threads = 20
 for index, row in df.iterrows():
     link = row['Links']
     print('Processing ' + link)
-    obj = SmartDL(link, output_directory, threads=threads)
+    obj = SmartDL(link, output_directory, threads=threads, progress_bar=False)
     obj.start()
     files_to_copy = sorted(glob.glob(output_directory + '/*'))
     for file in files_to_copy:
