@@ -5,6 +5,7 @@ import glob
 import os
 import sys
 import shutil
+import time
 
 links_list = 'tw_aws_links_list_test.csv'
 #links_list = 'tw_aws_links_list_2011.csv'
@@ -48,8 +49,17 @@ threads = 20
 for index, row in df.iterrows():
     link = row['Links']
     print('Processing ' + link)
-    obj = SmartDL(link, output_directory, threads=threads, progress_bar=False)
-    obj.start()
+    
+    while True:
+        try:
+            obj = SmartDL(link, output_directory, threads=threads, progress_bar=False)
+            obj.start()
+            break  # Break out of the while loop if the download is successful
+        except Exception as e:
+            print('Download failed:', e)
+            print('Retrying in 5 seconds...')
+            time.sleep(5)  # Wait for 5 seconds before retrying the download
+    
     files_to_copy = sorted(glob.glob(output_directory + '/*'))
     for file in files_to_copy:
         subprocess.run(['aws', 's3', 'cp', file, destination], bufsize=0)
