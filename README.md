@@ -1,2 +1,2 @@
-# tw_aws_dozent
+# tw_aws
 'The Twitter Stream Grab' download and storage
