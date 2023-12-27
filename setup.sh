@@ -7,9 +7,9 @@
 # 4. From the EC2 instance download this bash script
 
 # Setup snippet: clear && sudo apt update && sudo apt upgrade -y && sudo apt install -y awscli && aws s3 cp s3://gelc/setup.sh . && logout
-# Monitoring d1: clear && ps -ef | grep tw_aws && echo '---' && tail "$HOME"/my_env/s1/nohup.out && echo '---' && tail "$HOME"/my_env/s2/nohup.out && echo '---' && tail "$HOME"/my_env/s3/nohup.out && echo '---' && tail "$HOME"/my_env/s4/nohup.out && echo '---' && tail "$HOME"/my_env/s5/nohup.out
-# Monitoring d2: clear && ps -ef | grep tw_aws && echo '---' && tail "$HOME"/my_env/s6/nohup.out && echo '---' && tail "$HOME"/my_env/s7/nohup.out && echo '---' && tail "$HOME"/my_env/s8/nohup.out && echo '---' && tail "$HOME"/my_env/s9/nohup.out && echo '---' && tail "$HOME"/my_env/s10/nohup.out
-# Monitoring d3: clear && ps -ef | grep tw_aws && echo '---' && tail "$HOME"/my_env/s11/nohup.out && echo '---' && tail "$HOME"/my_env/s12/nohup.out && echo '---' && tail "$HOME"/my_env/s13/nohup.out && echo '---' && tail "$HOME"/my_env/s14/nohup.out && echo '---' && tail "$HOME"/my_env/s15/nohup.out
+# Monitoring d1: clear && ps -ef | grep tw_aws && echo '-s1-' && tail "$HOME"/my_env/s1/nohup.out && echo '-s2-' && tail "$HOME"/my_env/s2/nohup.out && echo '-s3-' && tail "$HOME"/my_env/s3/nohup.out && echo '-s4-' && tail "$HOME"/my_env/s4/nohup.out && echo '-s5-' && tail "$HOME"/my_env/s5/nohup.out
+# Monitoring d2: clear && ps -ef | grep tw_aws && echo '-s6-' && tail "$HOME"/my_env/s6/nohup.out && echo '-s7-' && tail "$HOME"/my_env/s7/nohup.out && echo '-s8-' && tail "$HOME"/my_env/s8/nohup.out && echo '-s9-' && tail "$HOME"/my_env/s9/nohup.out && echo '-s10-' && tail "$HOME"/my_env/s10/nohup.out
+# Monitoring d3: clear && ps -ef | grep tw_aws && echo '-s11-' && tail "$HOME"/my_env/s11/nohup.out && echo '-s12-' && tail "$HOME"/my_env/s12/nohup.out && echo '-s13-' && tail "$HOME"/my_env/s13/nohup.out && echo '-s14-' && tail "$HOME"/my_env/s14/nohup.out && echo '-s15-' && tail "$HOME"/my_env/s15/nohup.out
 
 venv () {
     sudo apt install -y python3-pip
