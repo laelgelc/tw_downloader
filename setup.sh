@@ -6,7 +6,10 @@
 # 3. Reboot the EC2 instance from the AWS Console
 # 4. From the EC2 instance download this bash script
 
-# Snippet: sudo apt update && sudo apt upgrade -y && sudo apt install -y awscli && aws s3 cp s3://gelc/setup.sh . && logout
+# Setup snippet: clear && sudo apt update && sudo apt upgrade -y && sudo apt install -y awscli && aws s3 cp s3://gelc/setup.sh . && logout
+# Monitoring d1: clear && ps -ef | grep tw_aws && echo '---' && tail "$HOME"/my_env/s1/nohup.out && echo '---' && tail "$HOME"/my_env/s2/nohup.out && echo '---' && tail "$HOME"/my_env/s3/nohup.out && echo '---' && tail "$HOME"/my_env/s4/nohup.out && echo '---' && tail "$HOME"/my_env/s5/nohup.out
+# Monitoring d2: clear && ps -ef | grep tw_aws && echo '---' && tail "$HOME"/my_env/s6/nohup.out && echo '---' && tail "$HOME"/my_env/s7/nohup.out && echo '---' && tail "$HOME"/my_env/s8/nohup.out && echo '---' && tail "$HOME"/my_env/s9/nohup.out && echo '---' && tail "$HOME"/my_env/s10/nohup.out
+# Monitoring d3: clear && ps -ef | grep tw_aws && echo '---' && tail "$HOME"/my_env/s11/nohup.out && echo '---' && tail "$HOME"/my_env/s12/nohup.out && echo '---' && tail "$HOME"/my_env/s13/nohup.out && echo '---' && tail "$HOME"/my_env/s14/nohup.out && echo '---' && tail "$HOME"/my_env/s15/nohup.out
 
 venv () {
     sudo apt install -y python3-pip
