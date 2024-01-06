@@ -1,4 +1,4 @@
-from pySmartDL import SmartDL
+from pySmartDL import SmartDL, utils
 import subprocess
 import pandas as pd
 import glob
@@ -55,6 +55,15 @@ df = pd.read_csv(links_list, header=0)
 # Define the number of threads to use for downloading files
 threads = 20
 
+# Generate a random user agent
+user_agent = utils.get_random_useragent()
+
+# Create a custom header with the user agent
+headers = {'User-Agent': user_agent}
+
+# Create a request_args dictionary with the headers
+request_args = {'headers': headers}
+
 # Iterate over each row in the DataFrame
 for index, row in df.iterrows():
     link = row['Links']
@@ -64,7 +73,7 @@ for index, row in df.iterrows():
         try:
             timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
             print(timestamp, ': Downloading ' + link)
-            obj = SmartDL(link, output_directory, threads=threads, progress_bar=False)
+            obj = SmartDL(link, output_directory, threads=threads, request_args=request_args, progress_bar=False)
             obj.start()
             break  # Break out of the while loop if the download is successful
         except Exception as e:
