@@ -1,3 +1,8 @@
+# Edit the file '.env' and provide the required parameters
+# Install the required libraries in the environment by executing: 'pip install -r env.req'
+
+# Importing the required libraries
+from dotenv import load_dotenv
 from pySmartDL import SmartDL, utils
 import subprocess
 import pandas as pd
@@ -8,8 +13,11 @@ import shutil
 import time
 import datetime
 
+load_dotenv()  # This line brings all environment variables from '.env' into 'os.environ'
+
 # Define the name of the CSV file containing the list of links
-links_list = 'tw_aws_links_list_test.csv'
+links_list = os.environ['LINKS_LIST']
+#links_list = 'tw_aws_links_list_test.csv'
 #links_list = 'tw_aws_links_list_2011.csv'
 #links_list = 'tw_aws_links_list_2012.csv'
 #links_list = 'tw_aws_links_list_2013.csv'
