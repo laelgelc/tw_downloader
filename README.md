@@ -1,2 +1,2 @@
 # tw_downloader
-'The Twitter Stream Grab' download and storage
+'The Twitter Stream Grab' downloading and storaging
