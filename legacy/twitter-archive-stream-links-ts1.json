@@ -1,0 +1,20 @@
+[
+  {
+    "day": "NaN",
+    "month": "11",
+    "year": "2011",
+    "link": "https://archive.org/download/archiveteam-twitter-json-2011/twitter-json-scrape-2011-11.zip"
+  },
+  {
+    "day": "30",
+    "month": "12",
+    "year": "2011",
+    "link": "https://archive.org/download/archiveteam-json-twitterstream/twitter-stream-2011-12-30.zip"
+  },
+  {
+    "day": "31",
+    "month": "12",
+    "year": "2011",
+    "link": "https://archive.org/download/archiveteam-json-twitterstream/twitter-stream-2011-12-31.zip"
+  }
+]
